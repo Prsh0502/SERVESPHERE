@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Create Event | ServeSphere</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#1b1c15",
+                    "background": "#fbfaee",
+                    "surface-bright": "#fbfaee",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#ba1a1a",
+                    "inverse-primary": "#ffb95f",
+                    "inverse-on-surface": "#f2f1e5",
+                    "tertiary-container": "#1abdff",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed": "#2a1700",
+                    "primary-fixed-dim": "#ffb95f",
+                    "on-primary-fixed-variant": "#653e00",
+                    "secondary-container": "#d5e3fd",
+                    "on-secondary-fixed-variant": "#3a485c",
+                    "surface-tint": "#855300",
+                    "outline-variant": "#d8c3ad",
+                    "surface-container-highest": "#e4e3d7",
+                    "on-tertiary-fixed": "#001e2d",
+                    "surface-container-low": "#f5f4e8",
+                    "on-error": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#303129",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1b1c15",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#b9c7e0",
+                    "surface-variant": "#e4e3d7",
+                    "on-primary-container": "#613b00",
+                    "primary-fixed": "#ffddb8",
+                    "secondary-fixed": "#d5e3fd",
+                    "tertiary-fixed-dim": "#7fd0ff",
+                    "secondary": "#515f74",
+                    "surface-container-high": "#e9e9dd",
+                    "surface-container": "#efeee3",
+                    "tertiary-fixed": "#c5e7ff",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-container": "#57657b",
+                    "outline": "#867461",
+                    "on-surface-variant": "#534434",
+                    "on-tertiary-fixed-variant": "#004c6a",
+                    "on-secondary-fixed": "#0d1c2f",
+                    "surface-dim": "#dbdbcf",
+                    "surface": "#fbfaee",
+                    "on-tertiary-container": "#004966",
+                    "primary": "#855300",
+                    "primary-container": "#f59e0b",
+                    "tertiary": "#00658b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        input:focus ~ label, input:not(:placeholder-shown) ~ label {
+            transform: translateY(-1.25rem) scale(0.85);
+            color: #855300;
+        }
+        .form-input-focus {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .form-input-focus:focus {
+            background-color: #ffffff;
+            box-shadow: 0 4px 20px -2px rgba(133, 83, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface antialiased min-h-screen flex">
+<!-- SideNavBar (Suppressed for focused task, but following JSON structure for layout context) -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-stone-50 dark:bg-zinc-950 flex flex-col p-6 gap-2 z-40 hidden md:flex">
+<div class="mb-10">
+<h1 class="font-serif text-xl font-bold text-amber-900 dark:text-white">ServeSphere</h1>
+<p class="font-sans text-xs font-medium tracking-wide text-zinc-500">Organization Portal</p>
+</div>
+<nav class="space-y-1">
+<div class="flex items-center gap-3 text-zinc-500 dark:text-zinc-400 px-4 py-3 hover:bg-amber-50/50 transition-all cursor-pointer">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-sans text-sm font-medium tracking-wide">Dashboard</span>
+</div>
+<div class="flex items-center gap-3 bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-200 rounded-lg px-4 py-3 translate-x-1 transition-transform">
+<span class="material-symbols-outlined">event</span>
+<span class="font-sans text-sm font-medium tracking-wide">Events</span>
+</div>
+<div class="flex items-center gap-3 text-zinc-500 dark:text-zinc-400 px-4 py-3 hover:bg-amber-50/50 transition-all cursor-pointer">
+<span class="material-symbols-outlined">group</span>
+<span class="font-sans text-sm font-medium tracking-wide">Volunteers</span>
+</div>
+<div class="flex items-center gap-3 text-zinc-500 dark:text-zinc-400 px-4 py-3 hover:bg-amber-50/50 transition-all cursor-pointer">
+<span class="material-symbols-outlined">assignment</span>
+<span class="font-sans text-sm font-medium tracking-wide">Tasks</span>
+</div>
+<div class="flex items-center gap-3 text-zinc-500 dark:text-zinc-400 px-4 py-3 hover:bg-amber-50/50 transition-all cursor-pointer">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-sans text-sm font-medium tracking-wide">Settings</span>
+</div>
+</nav>
+</aside>
+<!-- Main Canvas -->
+<main class="flex-1 md:ml-64 relative">
+<!-- Top Navigation (Simplified for Task) -->
+<header class="h-20 flex justify-between items-center px-8 max-w-7xl mx-auto sticky top-0 z-30">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+<span class="font-headline text-lg font-bold text-amber-900">Back to Calendar</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="professional portrait of a community organizer with a friendly smile, soft natural office lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrEuvzU1GNmlcYV1KmdG4QIQSBkeyR7zsIGlj6-9N3Tae60BbR8i_Cv2e2CgM6rgWHNBobyZgRWquhoc3_lTAWWCCi09eFe4SP8cOmoDpORlvHtUZAdZx9CrFmYhMo0na5VxoLYeZ3-zNS8smGZzIeiBo5-TYAXM8X0L0tLKWFoU5I2Nd2p4YP_vvbbrsOHRKkpg7PBHpef8sFbr_wBHY85QZsdn7kbT9H7IGP9NfYQf0IuZA6EQz2N9HWCKNaB3McyJeuwfxNg7ud"/>
+</div>
+</div>
+</header>
+<!-- Content Section -->
+<div class="max-w-4xl mx-auto px-8 pt-4 pb-20">
+<div class="mb-12 relative">
+<h2 class="font-headline text-5xl md:text-6xl text-on-surface tracking-tight leading-tight -mb-2">New Event</h2>
+<p class="font-body text-secondary text-lg max-w-lg">Transform a spark of an idea into a community movement. Detail your mission below.</p>
+<!-- Decorative element -->
+<div class="absolute -top-10 -right-10 w-48 h-48 bg-primary-container/10 rounded-full blur-3xl -z-10"></div>
+</div>
+<!-- Form Container -->
+<section class="glass-panel rounded-xl shadow-[0_20px_40px_rgba(51,65,85,0.06)] p-8 md:p-12 relative overflow-hidden">
+<!-- Inner Highlight -->
+<div class="absolute inset-0 border border-outline-variant/15 rounded-xl pointer-events-none"></div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+<!-- Event Name -->
+<div class="md:col-span-2 relative group">
+<label class="block font-label text-xs font-bold uppercase tracking-widest text-outline mb-2" for="event_name">Event Name</label>
+<input class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/30 focus:border-primary focus:ring-0 px-0 py-3 text-xl font-headline transition-all duration-300 form-input-focus placeholder:text-outline-variant/50" id="event_name" placeholder="e.g. Urban Garden Restoration" type="text"/>
+</div>
+<!-- Date & Time -->
+<div class="relative">
+<label class="block font-label text-xs font-bold uppercase tracking-widest text-outline mb-2" for="date">Date</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-0 top-1/2 -translate-y-1/2 text-primary pointer-events-none">calendar_today</span>
+<input class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/30 focus:border-primary focus:ring-0 pl-10 py-3 font-body transition-all duration-300 form-input-focus" id="date" type="date"/>
+</div>
+</div>
+<div class="relative">
+<label class="block font-label text-xs font-bold uppercase tracking-widest text-outline mb-2" for="time">Start Time</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-0 top-1/2 -translate-y-1/2 text-primary pointer-events-none">schedule</span>
+<input class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/30 focus:border-primary focus:ring-0 pl-10 py-3 font-body transition-all duration-300 form-input-focus" id="time" type="time"/>
+</div>
+</div>
+<!-- Location -->
+<div class="md:col-span-2 relative">
+<label class="block font-label text-xs font-bold uppercase tracking-widest text-outline mb-2" for="location">Location</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-0 top-1/2 -translate-y-1/2 text-primary pointer-events-none">location_on</span>
+<input class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/30 focus:border-primary focus:ring-0 pl-10 py-3 font-body transition-all duration-300 form-input-focus" id="location" placeholder="Street Address or Online Link" type="text"/>
+</div>
+</div>
+<!-- Category & Volunteers -->
+<div class="relative">
+<label class="block font-label text-xs font-bold uppercase tracking-widest text-outline mb-2" for="category">Category</label>
+<select class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/30 focus:border-primary focus:ring-0 px-4 py-3 font-body transition-all duration-300 form-input-focus appearance-none" id="category">
+<option>Environment</option>
+<option>Education</option>
+<option>Social Services</option>
+<option>Animal Welfare</option>
+<option>Disaster Relief</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-[calc(50%+6px)] -translate-y-1/2 text-outline pointer-events-none">expand_more</span>
+</div>
+<div class="relative">
+<label class="block font-label text-xs font-bold uppercase tracking-widest text-outline mb-2" for="volunteers">Volunteers Needed</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-0 top-1/2 -translate-y-1/2 text-primary pointer-events-none">person_add</span>
+<input class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/30 focus:border-primary focus:ring-0 pl-10 py-3 font-body transition-all duration-300 form-input-focus" id="volunteers" min="1" placeholder="0" type="number"/>
+</div>
+</div>
+<!-- Urgency Toggle -->
+<div class="md:col-span-2 flex items-center justify-between p-4 bg-surface-container-low rounded-lg group hover:bg-surface-container-high transition-colors">
+<div>
+<p class="font-body font-bold text-on-surface">Urgent Priority</p>
+<p class="font-body text-xs text-secondary">Mark this event as high priority for recruitment</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-outline-variant/30 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Description -->
+<div class="md:col-span-2 relative">
+<label class="block font-label text-xs font-bold uppercase tracking-widest text-outline mb-2" for="description">Mission Brief (Description)</label>
+<textarea class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/30 focus:border-primary focus:ring-0 px-4 py-3 font-body transition-all duration-300 form-input-focus" id="description" placeholder="Describe the impact this event will have on the community..." rows="5"></textarea>
+</div>
+<!-- Submit -->
+<div class="md:col-span-2 pt-6">
+<button class="w-full md:w-auto px-12 py-4 bg-gradient-to-r from-primary to-primary-container text-white font-label font-bold text-sm tracking-widest uppercase rounded-md shadow-lg hover:scale-105 hover:shadow-primary/20 transition-all duration-300 flex items-center justify-center gap-3" type="submit">
+                            Create Event
+                            <span class="material-symbols-outlined text-lg">auto_awesome</span>
+</button>
+</div>
+</form>
+</section>
+<!-- Supplemental "Asymmetric" Bento Element -->
+<div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 bg-surface-container-lowest p-8 rounded-xl flex flex-col justify-between border border-outline-variant/10 shadow-sm">
+<div>
+<span class="font-label text-xs font-bold text-primary uppercase tracking-widest block mb-4">Community Reach</span>
+<h3 class="font-headline text-3xl text-on-surface leading-tight">Your event will reach <span class="text-primary italic underline decoration-primary/30">1,200+</span> potential volunteers in this region.</h3>
+</div>
+<div class="mt-8 flex -space-x-4">
+<img class="w-12 h-12 rounded-full border-4 border-surface ring-2 ring-transparent" data-alt="portrait of a female volunteer, natural sunlight, warm colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1CTz66yvg3NIy5vkL9Y0Tnod0lB9b88cjnfQ2YrROTvIcOhdQhTIitfoZout_8iUeIg3gwTbFcbZNfw8OMjTZBsqvxnqEap6QqxIfByHuRpHZ6uV9SMCM55MItjrQ4rtV5bhrWYvGuP0Yx7xqRoGiSR32VwW9a2imF-i35Uua8r19u5h5N-R6NSwt_4JnHHIqcpVMJ864NV7oLUxNn8WpKSGIPeRrlq5TNQaCHqpFX3fsuP9ERufAIM7fEAeIXdoOGtp8E2i_OBs4"/>
+<img class="w-12 h-12 rounded-full border-4 border-surface ring-2 ring-transparent" data-alt="portrait of a male volunteer in park setting, cinematic bokeh" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQVizNq9PkMniLBIXgCXE0HOUcqYe1uzhvOFnYjUgnSIPCqsd5neb6WmAHK4vf31emghHXbMysTVWfuDvTm4ZnsyMsvMrwICavRtzwHagDFrkD6j2AqkPCIzQyxkrA_y2MTQJ7C8807V7JylK1MwHYKnflgB6US3dRjIwlv43EfcTMe50DYj9p9m5eHGLsnDkYkAQdeyGZpD5PLZWR_jEHwCjAfYEKPjA238B-z5xAoOT0DsUU_xqS7C3Dl8q_Yv2OIvkxt4LP8nVW"/>
+<img class="w-12 h-12 rounded-full border-4 border-surface ring-2 ring-transparent" data-alt="smiling young volunteer, soft focus background, editorial lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHVLXGHW85L53iXPsbCBz7pK43Yx1rH2KMZNofGUEKGUlTcBq8xQyb41p7irJHRXoD4k95Z8FYW47ddsgB3I9BeJSzSRssE-1dFVE8LV03G2SJLQQxs_zsqn0Sv36JFuaUVNiinC4re39ZYWhK579yrhWr_1LlMnZXpeoXYlumN1WRKHo2Pc6gZxeImJORSFt_NRkZJqvrXgw0z2ifzxFUBjbNvQJzBEB3PawS7XGQT7X6jbC6aKpitlB4MQRxWn-AYx_OImeV5s-E"/>
+<div class="w-12 h-12 rounded-full border-4 border-surface bg-surface-container-high flex items-center justify-center text-xs font-bold text-secondary">+1k</div>
+</div>
+</div>
+<div class="bg-primary text-on-primary p-8 rounded-xl flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-5xl mb-4" style="font-variation-settings: 'FILL' 1;">tips_and_updates</span>
+<h4 class="font-headline text-xl mb-2">Pro Tip</h4>
+<p class="font-body text-sm opacity-90">Adding a detailed description increases volunteer sign-ups by 45% on average.</p>
+</div>
+</div>
+</div>
+<!-- Footer (from JSON) -->
+<footer class="w-full py-12 mt-20 border-t border-zinc-200/10 bg-stone-50 dark:bg-zinc-950">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div>
+<h5 class="font-serif text-xl font-black text-amber-900 dark:text-amber-50">ServeSphere</h5>
+<p class="font-sans text-sm text-zinc-500 mt-2">© 2024 ServeSphere. Impacting communities with editorial precision.</p>
+</div>
+<div class="flex flex-wrap md:justify-end gap-6">
+<a class="font-sans text-sm text-zinc-500 hover:text-amber-600 transition-opacity opacity-80 hover:opacity-100" href="#">Impact Reports</a>
+<a class="font-sans text-sm text-zinc-500 hover:text-amber-600 transition-opacity opacity-80 hover:opacity-100" href="#">Privacy</a>
+<a class="font-sans text-sm text-zinc-500 hover:text-amber-600 transition-opacity opacity-80 hover:opacity-100" href="#">Terms</a>
+<a class="font-sans text-sm text-zinc-500 hover:text-amber-600 transition-opacity opacity-80 hover:opacity-100" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</main>
+</body></html>

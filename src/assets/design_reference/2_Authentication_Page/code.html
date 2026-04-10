@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ServeSphere | Join the Impact</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;0,900;1,400&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#1b1c15",
+                        "background": "#fbfaee",
+                        "surface-bright": "#fbfaee",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#ffb95f",
+                        "inverse-on-surface": "#f2f1e5",
+                        "tertiary-container": "#1abdff",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#2a1700",
+                        "primary-fixed-dim": "#ffb95f",
+                        "on-primary-fixed-variant": "#653e00",
+                        "secondary-container": "#d5e3fd",
+                        "on-secondary-fixed-variant": "#3a485c",
+                        "surface-tint": "#855300",
+                        "outline-variant": "#d8c3ad",
+                        "surface-container-highest": "#e4e3d7",
+                        "on-tertiary-fixed": "#001e2d",
+                        "surface-container-low": "#f5f4e8",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#303129",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1b1c15",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#b9c7e0",
+                        "surface-variant": "#e4e3d7",
+                        "on-primary-container": "#613b00",
+                        "primary-fixed": "#ffddb8",
+                        "secondary-fixed": "#d5e3fd",
+                        "tertiary-fixed-dim": "#7fd0ff",
+                        "secondary": "#515f74",
+                        "surface-container-high": "#e9e9dd",
+                        "surface-container": "#efeee3",
+                        "tertiary-fixed": "#c5e7ff",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#57657b",
+                        "outline": "#867461",
+                        "on-surface-variant": "#534434",
+                        "on-tertiary-fixed-variant": "#004c6a",
+                        "on-secondary-fixed": "#0d1c2f",
+                        "surface-dim": "#dbdbcf",
+                        "surface": "#fbfaee",
+                        "on-tertiary-container": "#004966",
+                        "primary": "#855300",
+                        "primary-container": "#f59e0b",
+                        "tertiary": "#00658b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-shadow {
+            box-shadow: 0 20px 40px rgba(51, 65, 85, 0.06);
+        }
+        input:focus + label,
+        input:not(:placeholder-shown) + label {
+            transform: translateY(-1.25rem) scale(0.85);
+            color: #855300;
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
+<!-- Background Art Elements -->
+<div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+<div class="absolute -top-[10%] -left-[5%] w-[40%] h-[60%] rounded-full bg-primary-fixed/20 blur-[120px]"></div>
+<div class="absolute bottom-[5%] -right-[5%] w-[30%] h-[50%] rounded-full bg-tertiary-fixed/10 blur-[100px]"></div>
+<div class="absolute top-[20%] right-[10%] w-px h-[40%] bg-gradient-to-b from-transparent via-outline-variant/30 to-transparent"></div>
+</div>
+<main class="min-h-screen flex flex-col items-center justify-center px-6 py-12">
+<!-- Brand Header -->
+<header class="mb-12 text-center">
+<h1 class="font-headline text-4xl md:text-5xl font-black text-primary tracking-tighter mb-2">ServeSphere</h1>
+<p class="font-body text-on-surface-variant tracking-wide uppercase text-xs font-semibold">Impacting communities with editorial precision</p>
+</header>
+<!-- Auth Container -->
+<div class="w-full max-w-[1000px] grid md:grid-cols-2 glass-panel rounded-3xl overflow-hidden custom-shadow relative">
+<!-- Branding/Image Side -->
+<div class="relative hidden md:block group overflow-hidden bg-surface-container">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="warm sunlit community garden with diverse volunteers working together in soft focus morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWU9VWa-qooRRDMkMYxqZPn4nUTA7A82fqQQ5hLCpePKfFp2IgayTkCzWso7tjx9qBBkJBxGIsOGUM-QOdozpVSeZo8fCmlEIuczjZxo5WPCHpGJBc2srD5eOuj3OxrCo8QiZc5vMC32vx62C0ifs7tQiL1bvOue9z8dvx6izmLky6Ol5kSRaX2krapqG7Uy9k0zE-QYQfzd7fef40eRuyUvjCPSDsmrV2nas6QisXyubtKgQe_NrSKpGEF4e_LomGYkF_GGWm9V13"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10 text-white">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary-fixed">award_star</span>
+<span class="text-xs font-bold tracking-widest uppercase opacity-90">Certified Impact</span>
+</div>
+<h2 class="font-headline text-4xl font-bold leading-tight mb-4">The art of giving,<br/>refined for the modern world.</h2>
+<p class="font-body text-primary-fixed/90 max-w-xs leading-relaxed">Join a network where every hour contributed is treated as a masterpiece of social change.</p>
+</div>
+</div>
+<!-- Form Side -->
+<div class="p-8 md:p-12 lg:p-16 flex flex-col justify-center bg-surface-container-lowest/40">
+<!-- Toggle Switch -->
+<div class="flex p-1 bg-surface-container-low rounded-full mb-10 w-fit mx-auto md:mx-0">
+<button class="px-6 py-2 text-sm font-bold rounded-full bg-white text-primary shadow-sm transition-all">Volunteer</button>
+<button class="px-6 py-2 text-sm font-medium rounded-full text-on-surface-variant hover:text-primary transition-all">Organization</button>
+</div>
+<div class="mb-8">
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-2">Create your account</h3>
+<p class="text-on-surface-variant text-sm">Welcome back. Please enter your details.</p>
+</div>
+<!-- Form -->
+<form class="space-y-6">
+<!-- Full Name -->
+<div class="relative group">
+<input class="peer w-full px-0 py-3 bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary transition-all placeholder-transparent" id="fullname" name="fullname" placeholder=" " type="text"/>
+<label class="absolute left-0 top-3 text-on-surface-variant transition-all pointer-events-none text-sm origin-left" for="fullname">Full Name</label>
+</div>
+<!-- Email -->
+<div class="relative group">
+<input class="peer w-full px-0 py-3 bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary transition-all placeholder-transparent" id="email" name="email" placeholder=" " type="email"/>
+<label class="absolute left-0 top-3 text-on-surface-variant transition-all pointer-events-none text-sm origin-left" for="email">Email Address</label>
+</div>
+<!-- Password -->
+<div class="relative group">
+<input class="peer w-full px-0 py-3 bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary transition-all placeholder-transparent" id="password" name="password" placeholder=" " type="password"/>
+<label class="absolute left-0 top-3 text-on-surface-variant transition-all pointer-events-none text-sm origin-left" for="password">Password</label>
+</div>
+<!-- Terms -->
+<div class="flex items-center gap-3 pt-2">
+<input class="w-4 h-4 rounded border-outline-variant text-primary focus:ring-primary/20" id="terms" type="checkbox"/>
+<label class="text-xs text-on-surface-variant leading-tight" for="terms">
+                            I agree to the <a class="text-primary font-bold hover:underline" href="#">Terms of Service</a> and <a class="text-primary font-bold hover:underline" href="#">Privacy Policy</a>.
+                        </label>
+</div>
+<!-- Primary Action -->
+<button class="w-full py-4 bg-gradient-to-r from-primary to-primary-container text-white font-bold rounded-lg shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 group" type="submit">
+                        Join ServeSphere
+                        <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+<!-- Divider -->
+<div class="flex items-center gap-4 py-4">
+<div class="flex-1 h-px bg-outline-variant/30"></div>
+<span class="text-[10px] uppercase tracking-widest font-black text-on-surface-variant/50">or continue with</span>
+<div class="flex-1 h-px bg-outline-variant/30"></div>
+</div>
+<!-- Social Login -->
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors text-sm font-semibold" type="button">
+<img alt="Google" class="w-4 h-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8vUSB46HGoKOOznmXb_xVRa6uTIjG5MOeypfaXVJTECDoFO_mtlZHChmtkZKjDoYgmOXvez4AO-mWspXlIEx2IyWwlgbec6MYQis-yUBbmYfF2sudMep-r3E0gXPbp4w3AtA12qeNnxfbsUMo93eR__2ddftPQq-Fd3BbvU0ps3Umos6GKC5szKAF8LPi6yf7_8Nr47ogGhe2h0yTY2a9FdtOs9IMSzhySp8I5Fh1j6dBt8vVrDflEMpZ2z_vF0W1lMLiOdDzIAJe"/>
+                            Google
+                        </button>
+<button class="flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors text-sm font-semibold" type="button">
+<span class="material-symbols-outlined text-lg" data-weight="fill">ios</span>
+                            Apple
+                        </button>
+</div>
+</form>
+<p class="mt-10 text-center text-sm text-on-surface-variant">
+                    Already part of the movement? 
+                    <a class="text-primary font-bold hover:underline ml-1" href="#">Log in here</a>
+</p>
+</div>
+</div>
+<!-- Footer Credits -->
+<footer class="mt-12 text-center space-y-4">
+<div class="flex justify-center gap-8">
+<a class="text-xs font-bold text-on-surface-variant hover:text-primary transition-colors" href="#">Impact Reports</a>
+<a class="text-xs font-bold text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="text-xs font-bold text-on-surface-variant hover:text-primary transition-colors" href="#">Terms</a>
+<a class="text-xs font-bold text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<p class="text-[11px] text-on-surface-variant/60 tracking-wider">
+                © 2024 SERVESPHERE. IMPACTING COMMUNITIES WITH EDITORIAL PRECISION.
+            </p>
+</footer>
+</main>
+<!-- Floating Impact Card (Signature Component) -->
+<div class="fixed bottom-8 right-8 hidden lg:block">
+<div class="glass-panel p-6 rounded-2xl custom-shadow border border-white/20 max-w-[240px]">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-weight="fill">volunteer_activism</span>
+</div>
+<div>
+<div class="text-[10px] font-black text-primary/60 uppercase tracking-tighter">Live Network</div>
+<div class="text-sm font-bold text-on-surface">12,482 Active</div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="h-1 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[75%] rounded-full"></div>
+</div>
+<div class="flex justify-between items-center text-[10px] font-bold text-on-surface-variant">
+<span>GOAL: 15K HEROES</span>
+<span>83%</span>
+</div>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ServeSphere | Organization Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#1b1c15",
+                        "background": "#fbfaee",
+                        "surface-bright": "#fbfaee",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#ffb95f",
+                        "inverse-on-surface": "#f2f1e5",
+                        "tertiary-container": "#1abdff",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#2a1700",
+                        "primary-fixed-dim": "#ffb95f",
+                        "on-primary-fixed-variant": "#653e00",
+                        "secondary-container": "#d5e3fd",
+                        "on-secondary-fixed-variant": "#3a485c",
+                        "surface-tint": "#855300",
+                        "outline-variant": "#d8c3ad",
+                        "surface-container-highest": "#e4e3d7",
+                        "on-tertiary-fixed": "#001e2d",
+                        "surface-container-low": "#f5f4e8",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#303129",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1b1c15",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#b9c7e0",
+                        "surface-variant": "#e4e3d7",
+                        "on-primary-container": "#613b00",
+                        "primary-fixed": "#ffddb8",
+                        "secondary-fixed": "#d5e3fd",
+                        "tertiary-fixed-dim": "#7fd0ff",
+                        "secondary": "#515f74",
+                        "surface-container-high": "#e9e9dd",
+                        "surface-container": "#efeee3",
+                        "tertiary-fixed": "#c5e7ff",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#57657b",
+                        "outline": "#867461",
+                        "on-surface-variant": "#534434",
+                        "on-tertiary-fixed-variant": "#004c6a",
+                        "on-secondary-fixed": "#0d1c2f",
+                        "surface-dim": "#dbdbcf",
+                        "surface": "#fbfaee",
+                        "on-tertiary-container": "#004966",
+                        "primary": "#855300",
+                        "primary-container": "#f59e0b",
+                        "tertiary": "#00658b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #fbfaee; color: #1b1c15; }
+        .serif { font-family: 'Noto Serif', serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .impact-gradient { background: linear-gradient(135deg, #855300 0%, #f59e0b 100%); }
+        .glass-nav { backdrop-filter: blur(24px); background-color: rgba(251, 250, 238, 0.7); }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-stone-50 flex flex-col p-6 gap-2 z-40">
+<div class="mb-8">
+<h1 class="font-serif text-xl font-bold text-amber-900">ServeSphere</h1>
+<p class="font-sans text-xs font-medium tracking-wide text-zinc-500 uppercase">Organization Portal</p>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 text-zinc-500 hover:bg-amber-50/50 transition-all px-4 py-3 font-sans text-sm font-medium tracking-wide" href="#">
+<span class="material-symbols-outlined">dashboard</span> Dashboard
+            </a>
+<a class="flex items-center gap-3 text-zinc-500 hover:bg-amber-50/50 transition-all px-4 py-3 font-sans text-sm font-medium tracking-wide" href="#">
+<span class="material-symbols-outlined">event</span> Events
+            </a>
+<a class="flex items-center gap-3 bg-amber-50 text-amber-800 rounded-lg px-4 py-3 font-sans text-sm font-medium tracking-wide" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">group</span> Volunteers
+            </a>
+<a class="flex items-center gap-3 text-zinc-500 hover:bg-amber-50/50 transition-all px-4 py-3 font-sans text-sm font-medium tracking-wide" href="#">
+<span class="material-symbols-outlined">assignment</span> Tasks
+            </a>
+<a class="flex items-center gap-3 text-zinc-500 hover:bg-amber-50/50 transition-all px-4 py-3 font-sans text-sm font-medium tracking-wide" href="#">
+<span class="material-symbols-outlined">settings</span> Settings
+            </a>
+</nav>
+<div class="mt-auto pt-6 border-t border-zinc-200/50">
+<div class="flex items-center gap-3 px-2">
+<img alt="Org Logo" class="w-10 h-10 rounded-full object-cover bg-surface-container" data-alt="Professional logo of a non-profit organization featuring a stylized tree in amber and earth tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoaIM4Wd5Ai_SqRQiB6xGn9_zZ6nMJPzk3QCEuxHH7THdLnARbYYna-jI9axGitmMKr5TSXRZHoLNi_PjHF5MJx2jlvHkQpKcGDH03EI-NuYTvmPqmcZa6EFrtQnrMa65zY5Q8ZWoAIxGqPLExmeCOPVuIjuAAHyqfDyiViguqQiAATAl3d6rvL04C6_AkAthgwmLRPI8R4Zn1hsYXM5HJBDK_O5q22axp9J1zg0z5KKbodccZgz-1wBjUPpfiAzdhXxEdnISEFuP5"/>
+<div>
+<p class="text-sm font-bold">GreenLeaf Initiative</p>
+<p class="text-xs text-zinc-500">Premium Member</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 min-h-screen p-12">
+<!-- Header Section -->
+<header class="mb-12 flex justify-between items-end">
+<div>
+<h2 class="serif text-5xl font-black text-on-surface tracking-tight mb-2">Volunteer Force</h2>
+<p class="text-on-surface-variant max-w-xl">Curate your community impact. Manage, assign, and track the individuals turning vision into reality.</p>
+</div>
+<button class="impact-gradient text-white px-8 py-3 rounded-md font-bold text-sm hover:scale-105 transition-transform shadow-lg shadow-amber-900/10">
+                Recruit New Talents
+            </button>
+</header>
+<!-- Active Events Tabs (Asymmetric Layout) -->
+<section class="mb-16">
+<h3 class="serif text-2xl font-bold mb-6 flex items-center gap-2">
+<span class="w-8 h-[2px] bg-primary"></span> Active Missions
+            </h3>
+<div class="flex gap-4 overflow-x-auto pb-4 no-scrollbar">
+<button class="flex-none bg-surface-container-lowest shadow-[0_20px_40px_rgba(51,65,85,0.06)] px-6 py-4 rounded-xl border-b-4 border-primary group hover:translate-y-[-4px] transition-all">
+<p class="text-xs font-bold text-primary uppercase tracking-widest mb-1">Current Focus</p>
+<p class="serif text-lg font-bold">Urban Garden Expo 2024</p>
+</button>
+<button class="flex-none bg-surface-container-low px-6 py-4 rounded-xl opacity-70 hover:opacity-100 transition-all border-b-4 border-transparent">
+<p class="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-1">Upcoming</p>
+<p class="serif text-lg font-bold">Beach Cleanup Drive</p>
+</button>
+<button class="flex-none bg-surface-container-low px-6 py-4 rounded-xl opacity-70 hover:opacity-100 transition-all border-b-4 border-transparent">
+<p class="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-1">Ongoing</p>
+<p class="serif text-lg font-bold">Weekly Food Distribution</p>
+</button>
+</div>
+</section>
+<!-- Volunteer Assignment Bento Grid -->
+<section class="mb-20">
+<div class="flex items-center justify-between mb-8">
+<h3 class="serif text-3xl font-bold">Candidate Pool</h3>
+<div class="flex items-center gap-4">
+<span class="text-sm font-medium text-zinc-500">Filter by Skill:</span>
+<select class="bg-surface-container-low border-none rounded-lg text-sm font-medium focus:ring-primary">
+<option>All Skills</option>
+<option>First Aid</option>
+<option>Logistics</option>
+<option>Marketing</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Volunteer Card 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-[0_20px_40px_rgba(51,65,85,0.04)] relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4">
+<span class="bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2 py-1 rounded-full uppercase">Available Now</span>
+</div>
+<div class="flex items-center gap-4 mb-6">
+<img alt="Volunteer" class="w-16 h-16 rounded-full object-cover outline outline-4 outline-surface-container-low" data-alt="Portrait of a young woman with a warm, friendly smile, outdoor natural lighting with soft bokeh background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3sTpAyAHPtLfIGDWGJfEr_D5wzWp-83RkaEgsz7NC6lOTRLo8EUm6dXUd46U26ErMWuXS39oLyXO3fSubKwRkeobibihsQYMpopJFRlsJ4VMquTLLTBH0DMHJzoDyBGT8VxCEVutfQ7RzUaLFW3J6VhagHbU0TH7ki9vjrLG4a1A0oAK-JihoKb3_YHPVoCZ25doBe7_ccL_0SjKui84pvy6A4pROfkErgXOaB79dCxMSlfJ-lnUw9SUDAV1ApdpnL8uw1UHZryMO"/>
+<div>
+<h4 class="serif text-xl font-bold text-on-surface">Sarah Jenkins</h4>
+<p class="text-xs text-zinc-500 font-medium">Joined Oct 2023 • 48 Hours</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-3 py-1 bg-amber-50 text-amber-700 text-xs font-bold rounded-full">First Aid</span>
+<span class="px-3 py-1 bg-stone-100 text-stone-600 text-xs font-bold rounded-full">Logistics</span>
+</div>
+<div class="space-y-3">
+<label class="text-[10px] uppercase font-black text-zinc-400 tracking-widest block">Assign to Task</label>
+<select class="w-full bg-surface-container-low border-none rounded-lg text-sm py-3 focus:ring-primary transition-colors">
+<option>Select Mission Component...</option>
+<option>Lead Coordinator</option>
+<option>Registration Desk</option>
+<option>Equipment Setup</option>
+</select>
+</div>
+</div>
+<!-- Volunteer Card 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-[0_20px_40px_rgba(51,65,85,0.04)] relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4">
+<span class="bg-amber-100 text-amber-700 text-[10px] font-bold px-2 py-1 rounded-full uppercase">In Meeting</span>
+</div>
+<div class="flex items-center gap-4 mb-6">
+<img alt="Volunteer" class="w-16 h-16 rounded-full object-cover outline outline-4 outline-surface-container-low" data-alt="Professional portrait of a man in his 30s with a clean-cut look, wearing a neutral grey linen shirt, soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTqkKXtnHJjfmA_Mn0hxSzNYyEl08qeOOqYECFQvu5VcVdJabMUUxC60dZeDdQ32kToYlIR1EP3i-IuDKL654JZXwng_Abl_d53R1n55z2jDYVcsESqMIO8kQpNi0Wt4TZEQqrMBdDqCUcLk7bFl134Pu3tKpVWPnKQmxfTMialebIdX_fIWe2r-gO6PcBTnVfEaKgwHcXCwCaWZdM8YG4EuCQXft66Dgja4Q89sCr6yTvyUIltf1k_XW4spfa02XykM3eUVzyVvm_"/>
+<div>
+<h4 class="serif text-xl font-bold text-on-surface">Marcus Thorne</h4>
+<p class="text-xs text-zinc-500 font-medium">Joined Jan 2024 • 12 Hours</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-3 py-1 bg-amber-50 text-amber-700 text-xs font-bold rounded-full">Marketing</span>
+<span class="px-3 py-1 bg-stone-100 text-stone-600 text-xs font-bold rounded-full">Copywriting</span>
+</div>
+<div class="space-y-3">
+<label class="text-[10px] uppercase font-black text-zinc-400 tracking-widest block">Assign to Task</label>
+<select class="w-full bg-surface-container-low border-none rounded-lg text-sm py-3 focus:ring-primary">
+<option>Select Mission Component...</option>
+<option>Social Media Coverage</option>
+<option>Press Relations</option>
+</select>
+</div>
+</div>
+<!-- Volunteer Card 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-[0_20px_40px_rgba(51,65,85,0.04)] relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4">
+<span class="bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2 py-1 rounded-full uppercase">Available Now</span>
+</div>
+<div class="flex items-center gap-4 mb-6">
+<img alt="Volunteer" class="w-16 h-16 rounded-full object-cover outline outline-4 outline-surface-container-low" data-alt="Portrait of a diverse woman with curly hair looking confident, soft morning light in an urban courtyard setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxvryH2sVHo2yTou87W4RA9_uk-B7XLhDRxo7QvuRlNNFdEmY5anBv5ZE3nY1a1fSEBrWH1dSK3lcV4UBvTdV375DBogVKHpB-2rgmjHk7m6NYwuatZ4kQGKBMLAt7_rRPgA4WzpGBvv5EK98mnKmYXvEYuC8_N875lzSdqJJM6o6JfhBra8MLGl9T7cRzVjlxZmrigpo0Mw6Ze6hawEkTAbmMFaBmnDbWOHyH6DCbcH1j6Du4_c4knnh72yBl4s-HKaTpvn4zKCDN"/>
+<div>
+<h4 class="serif text-xl font-bold text-on-surface">Elena Rodriguez</h4>
+<p class="text-xs text-zinc-500 font-medium">Joined Feb 2023 • 124 Hours</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-3 py-1 bg-amber-50 text-amber-700 text-xs font-bold rounded-full">Logistics</span>
+<span class="px-3 py-1 bg-stone-100 text-stone-600 text-xs font-bold rounded-full">Crisis Mgmt</span>
+</div>
+<div class="space-y-3">
+<label class="text-[10px] uppercase font-black text-zinc-400 tracking-widest block">Assign to Task</label>
+<select class="w-full bg-surface-container-low border-none rounded-lg text-sm py-3 focus:ring-primary">
+<option>Select Mission Component...</option>
+<option>Supply Chain Lead</option>
+<option>Volunteer Training</option>
+</select>
+</div>
+</div>
+</div>
+</section>
+<!-- Management Table -->
+<section>
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-[0_40px_80px_rgba(51,65,85,0.08)]">
+<div class="px-8 py-10 border-b border-stone-100 flex justify-between items-center">
+<div>
+<h3 class="serif text-2xl font-bold">Roster Overview</h3>
+<p class="text-sm text-zinc-500">Real-time status of all active participants</p>
+</div>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-stone-100 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-zinc-400">download</span>
+</button>
+<button class="p-2 hover:bg-stone-100 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-zinc-400">filter_list</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-stone-50/50">
+<th class="px-8 py-5 text-[10px] uppercase font-black text-zinc-400 tracking-[0.2em]">Volunteer</th>
+<th class="px-8 py-5 text-[10px] uppercase font-black text-zinc-400 tracking-[0.2em]">Assigned Mission</th>
+<th class="px-8 py-5 text-[10px] uppercase font-black text-zinc-400 tracking-[0.2em]">Status</th>
+<th class="px-8 py-5 text-[10px] uppercase font-black text-zinc-400 tracking-[0.2em]">Performance</th>
+<th class="px-8 py-5 text-[10px] uppercase font-black text-zinc-400 tracking-[0.2em]">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-stone-100">
+<tr class="hover:bg-stone-50/30 transition-colors">
+<td class="px-8 py-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center text-amber-700 font-bold text-xs">SJ</div>
+<span class="font-bold text-sm">Sarah Jenkins</span>
+</div>
+</td>
+<td class="px-8 py-6 text-sm text-zinc-600">Urban Garden Expo</td>
+<td class="px-8 py-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-[10px] font-black uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Assigned
+                                    </span>
+</td>
+<td class="px-8 py-6">
+<div class="w-24 h-1.5 bg-stone-100 rounded-full overflow-hidden">
+<div class="w-[85%] h-full impact-gradient"></div>
+</div>
+</td>
+<td class="px-8 py-6">
+<button class="text-zinc-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-stone-50/30 transition-colors">
+<td class="px-8 py-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-stone-100 flex items-center justify-center text-stone-500 font-bold text-xs">DK</div>
+<span class="font-bold text-sm">David Kim</span>
+</div>
+</td>
+<td class="px-8 py-6 text-sm text-zinc-400 italic">Unassigned</td>
+<td class="px-8 py-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-stone-100 text-stone-500 text-[10px] font-black uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-stone-400"></span> Pending
+                                    </span>
+</td>
+<td class="px-8 py-6">
+<div class="w-24 h-1.5 bg-stone-100 rounded-full overflow-hidden">
+<div class="w-[0%] h-full impact-gradient"></div>
+</div>
+</td>
+<td class="px-8 py-6">
+<button class="text-zinc-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-stone-50/30 transition-colors">
+<td class="px-8 py-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center text-red-600 font-bold text-xs">LW</div>
+<span class="font-bold text-sm">Lisa Wong</span>
+</div>
+</td>
+<td class="px-8 py-6 text-sm text-zinc-600">Beach Cleanup</td>
+<td class="px-8 py-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-red-600 text-[10px] font-black uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-red-500"></span> Waitlisted
+                                    </span>
+</td>
+<td class="px-8 py-6">
+<div class="w-24 h-1.5 bg-stone-100 rounded-full overflow-hidden">
+<div class="w-[40%] h-full bg-red-400"></div>
+</div>
+</td>
+<td class="px-8 py-6">
+<button class="text-zinc-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="ml-64 bg-stone-50 py-12 mt-20 border-t border-zinc-200/10">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div>
+<h4 class="font-serif text-xl font-black text-amber-900 mb-2">ServeSphere</h4>
+<p class="font-sans text-sm text-zinc-500">© 2024 ServeSphere. Impacting communities with editorial precision.</p>
+</div>
+<div class="flex gap-8 md:justify-end">
+<a class="text-zinc-500 text-sm hover:text-amber-600 hover:underline underline-offset-4 transition-all" href="#">Impact Reports</a>
+<a class="text-zinc-500 text-sm hover:text-amber-600 hover:underline underline-offset-4 transition-all" href="#">Privacy</a>
+<a class="text-zinc-500 text-sm hover:text-amber-600 hover:underline underline-offset-4 transition-all" href="#">Terms</a>
+<a class="text-zinc-500 text-sm hover:text-amber-600 hover:underline underline-offset-4 transition-all" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>
