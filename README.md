@@ -1,15 +1,15 @@
-## ServeSphere
+### ServeSphere
 Smart Volunteer–Organization Event Management Platform
 
 A full-stack system designed to bridge the gap between volunteers and organizations through efficient event management, scalable database design, and seamless user interaction.
 
-## Project Overview
+### Project Overview
 ServeSphere is built to solve a real-world coordination problem:
 
 Organizations struggle to manage events and volunteers efficiently, while volunteers lack a centralized platform to discover and enroll in opportunities.
 This platform provides a structured, scalable solution using modern web technologies and relational database design.
 
-## Key Highlights 
+### Key Highlights 
 🔗 Real-world DBMS Design with normalized schema and relationships
 
 ⚡ Full-stack integration (Frontend + Backend + Database)
@@ -22,7 +22,7 @@ This platform provides a structured, scalable solution using modern web technolo
 
 💡 Built with scalability and extensibility in mind
 
-## System Architecture
+### System Architecture
 Frontend (React / HTML-CSS)
         ↓
 Flask REST API (Backend)
@@ -35,7 +35,7 @@ PostgreSQL Database (pgAdmin)
  
  Database: Stores structured relational data
 
-## Database Design 
+### Database Design 
 
 # Entities & Relationships:
 🏢 Organization → Event (1 : Many)
@@ -48,7 +48,7 @@ Avoids redundancy (Normalization)
 
 Scales for large datasets
 
-## Core Features
+###  Core Features
 # Organization Module
 Register and manage organizations
 
