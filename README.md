@@ -57,11 +57,11 @@ Unique email and phone validation
 Create and manage events
 
 Linked to organizations via foreign key
-🙋 Volunteer Module
+# Volunteer Module
 Volunteer registration system
 
 Unique identity enforcement
-🔗 Enrollment System
+# Enrollment System
 Volunteers can enroll in multiple events
 
 Tracks participation with timestamp
