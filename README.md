@@ -1,16 +1,52 @@
-# React + Vite:
+###🌐 ServeSphere
+Smart Volunteer–Organization Event Management Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack system designed to bridge the gap between volunteers and organizations through efficient event management, scalable database design, and seamless user interaction.
 
-Currently, two official plugins are available:   
+###🚀 Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+ServeSphere is built to solve a real-world coordination problem:
 
-## React Compiler:
+❗ Organizations struggle to manage events and volunteers efficiently, while volunteers lack a centralized platform to discover and enroll in opportunities.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This platform provides a structured, scalable solution using modern web technologies and relational database design.
 
-## Expanding the ESLint configuration:
+🎯 Key Highlights (Why This Project Stands Out)
+🔗 Real-world DBMS Design with normalized schema and relationships
+⚡ Full-stack integration (Frontend + Backend + Database)
+🔄 Many-to-Many relationship handling using junction tables
+📊 Supports advanced SQL queries (aggregation, filtering, sorting)
+🧩 Modular backend using REST APIs
+💡 Built with scalability and extensibility in mind
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+###🏗️ System Architecture
+Frontend (React / HTML-CSS)
+        ↓
+Flask REST API (Backend)
+        ↓
+PostgreSQL Database (pgAdmin)
+Frontend: Handles UI/UX and user interaction
+Backend: Processes requests and connects logic with database
+Database: Stores structured relational data
+
+###🗂️ Database Design (Core Strength 💪)
+Entities & Relationships:
+🏢 Organization → Event (1 : Many)
+🙋 Volunteer ↔ Event (Many : Many)
+Why this matters:
+Efficient data handling
+Avoids redundancy (Normalization)
+Scales for large datasets
+🧠 Core Features
+🏢 Organization Module
+Register and manage organizations
+Unique email and phone validation
+📅 Event Module
+Create and manage events
+Linked to organizations via foreign key
+🙋 Volunteer Module
+Volunteer registration system
+Unique identity enforcement
+🔗 Enrollment System
+Volunteers can enroll in multiple events
+Tracks participation with timestamp
