@@ -16,7 +16,7 @@ This platform provides a structured, scalable solution using modern web technolo
 
 🔄 Many-to-Many relationship handling using junction tables
 
-📊 Supports advanced SQL queries (aggregation, filtering, sorting)
+📊 Supports advanced SQL queries (aggregation,normalization, filtering, sorting)
 
 🧩 Modular backend using REST APIs
 
