@@ -1,5 +1,4 @@
-### ServeSphere
-Smart Volunteer–Organization Event Management Platform
+### ServeSphere- Smart Volunteer–Organization Event Management Platform
 
 A full-stack system designed to bridge the gap between volunteers and organizations through efficient event management, scalable database design, and seamless user interaction.
 
